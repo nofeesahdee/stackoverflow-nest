@@ -9,5 +9,6 @@ import { QuestionService } from './question.service';
   imports: [SequelizeModule.forFeature([Question]), AuthModule],
   controllers: [QuestionController],
   providers: [QuestionService],
+  exports: [QuestionService],
 })
 export class QuestionModule {}

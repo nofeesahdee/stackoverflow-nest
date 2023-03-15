@@ -8,6 +8,7 @@ import {
   PrimaryKey,
   Table,
 } from 'sequelize-typescript';
+import { Answer } from 'src/answer/answer.model';
 import { Question } from 'src/question/question.model';
 
 interface PersonAttributes {
@@ -59,4 +60,7 @@ export class Person extends Model<
 
   @HasMany(() => Question)
   questions: Question[];
+
+  @HasMany(() => Answer)
+  answer: Answer[];
 }
